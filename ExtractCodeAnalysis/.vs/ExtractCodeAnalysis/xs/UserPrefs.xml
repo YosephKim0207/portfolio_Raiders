@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{92A32968-70DA-4930-94FB-C552E237C72F}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExtractCodeAnalysis/SpawnProjectile.cs">
+    <Files>
+      <File FileName="ExtractCodeAnalysis/Program.cs" Line="20" Column="21" />
+      <File FileName="ExtractCodeAnalysis/EmptyStruct.cs" Line="2" Column="41" />
+      <File FileName="ExtractCodeAnalysis/SpawnProjectile.cs" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ExtractCodeAnalysis" expanded="True">
+            <Node name="ExtractCodeAnalysis" expanded="True">
+              <Node name="SpawnProjectile.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ExtractCodeAnalysis PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

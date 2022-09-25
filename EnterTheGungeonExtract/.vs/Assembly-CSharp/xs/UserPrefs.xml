@@ -1,0 +1,45 @@
+﻿<Properties>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assembly-CSharp/PlayerController.cs">
+    <Files>
+      <File FileName="Assembly-CSharp/PlayerController.cs" Line="8592" Column="189" />
+      <File FileName="Assembly-CSharp/GameActor.cs" Line="9" Column="23" />
+      <File FileName="Assembly-CSharp/VolleyUtility.cs" Line="11" Column="4" NotebookId="1" />
+      <File FileName="Assembly-CSharp/SpawnManager.cs" Line="220" Column="27" NotebookId="1" />
+      <File FileName="Assembly-CSharp/PathologicalGames/SpawnPool.cs" Line="187" Column="48" NotebookId="1" />
+      <File FileName="Assembly-CSharp/PathologicalGames/PrefabPool.cs" Line="261" Column="20" NotebookId="1" />
+      <File FileName="Assembly-CSharp/PlayerOrbital.cs" Line="403" Column="41" NotebookId="1" />
+      <File FileName="Assembly-CSharp/Gun.cs" Line="2302" Column="13" NotebookId="1" />
+      <File FileName="Assembly-CSharp/PlayerOrbitalFollower.cs" Line="302" Column="9" NotebookId="1" />
+      <File FileName="Assembly-CSharp/AIShooter.cs" Line="818" Column="42" NotebookId="1" />
+      <File FileName="Assembly-CSharp/Vector2Extensions.cs" Line="123" Column="3" NotebookId="1" />
+      <File FileName="Assembly-CSharp/Projectile.cs" Line="1042" Column="14" NotebookId="1" />
+      <File FileName="Assembly-CSharp/BraveMathCollege.cs" Line="513" Column="3" NotebookId="1" />
+      <File FileName="Assembly-CSharp/ShootVolleyFromObjectSynergyProcessor.cs" Line="84" Column="90" NotebookId="1" />
+      <File FileName="Assembly-CSharp/ProjectileModule.cs" Line="71" Column="20" NotebookId="1" />
+      <File FileName="Assembly-CSharp/GunParticleSystemController.cs" Line="101" Column="31" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="PathologicalGames" expanded="True" />
+              <Node name="PlayerController.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>preWorldPos</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
