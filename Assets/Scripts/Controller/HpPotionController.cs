@@ -6,7 +6,7 @@ using static EnumList;
 public class HpPotionController : ItemController {
     int _recoverHp = 15;
     float _disappearTime = 12.0f;
-    float _countDown = 0.0f;
+    float _countDown = 10.0f;
     bool _takeItem = false;
     Vector3 _destPos = Vector3.zero;
 

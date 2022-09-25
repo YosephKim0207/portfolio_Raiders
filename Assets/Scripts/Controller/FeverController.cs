@@ -13,14 +13,9 @@ public class FeverController : ItemController {
             _playerController = collision.GetComponent<PlayerController>();
         }
 
-        // TODO
-        // 아이템 습득시 UI_Fever 적용시키기
 
         // Fever 아이템 습득에 따른 fever state 시간 설정 및 fever 기능 on 후 필드 아이템 제거 
         if (_playerController != null && !_playerController.HasFever) {
-            //fever = Resources.Load<GameObject>($"Prefabs/UI/UI_Fever");
-            //fever = Object.Instantiate<GameObject>(fever);
-
             Manager.UI.ShowPopupUI<UI_Fever>(useRootCanvas : false);
 
             _playerController.FeverTime = _feverTime;

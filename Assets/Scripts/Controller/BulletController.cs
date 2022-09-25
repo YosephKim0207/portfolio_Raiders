@@ -32,10 +32,6 @@ public class BulletController : CreatureController {
         base.UpdateController();
     }
 
-    //protected override void UpdateIdle() {
-    //    transform.position = Gun.ShootPoint.position;
-    //    State = CreatureState.Move;
-    //}
 
     protected override void UpdateMoving() {
         //_rigidbody.velocity = _destPos * _speed;
@@ -49,18 +45,6 @@ public class BulletController : CreatureController {
     }
 
     
-
-    //protected virtual void SetBulletDest() {
-    //    // 총알 타겟 설정
-    //    //Debug.Log($"Set Bullet Dest {time}");
-
-    //    // TODO Rotation 없애는 test 중
-    //    // TODO 총알이 회전하는 것처럼 보이는 것이 아닌 rotation이 즉각 바뀌어 나타나도록 변경할 것 
-    //    float angle = Mathf.Atan2(_destPos.y, _destPos.x) * Mathf.Rad2Deg;  // target에 대한 xy방향벡터를 통해 tan 각도 구하기
-    //    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);  //Z축 중심으로 angle만큼 회전     
-
-    //}
-
     private void OnTriggerEnter2D(Collider2D collision) {
         // 총알 간의 충돌이 발생하는 경우 || 아이템과 충돌하는 경우 
         if (collision.gameObject.layer.Equals(8) || collision.gameObject.layer.Equals(9)) {

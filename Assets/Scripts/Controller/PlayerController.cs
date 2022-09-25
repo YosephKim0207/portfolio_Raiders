@@ -20,9 +20,6 @@ public class PlayerController : CreatureController {
     public bool _hasGun { get; private set; }
     bool _hasFever = false;
     bool _equipPossible = true;
-    //static public bool GameOver { get; protected set; }
-    //static public GameState GamePlayState { get; protected set; }
-    //GameState GamePlayState;
     public bool HasFever {
         get { return _hasFever; }
         set {
@@ -38,8 +35,6 @@ public class PlayerController : CreatureController {
     static public Action<int> RemainAmmoAction = null;
     static public Action<float> FeverAction = null;
 
-    // TODO
-    // 플레이어의 체력을 Event로 쏴주기 >> 추후 멀티플레이에서도 사용하기 위함
     public override int HP {
         get => base.HP;
         set {
@@ -227,24 +222,14 @@ public class PlayerController : CreatureController {
     }
 
     protected override void UpdateJump() {
-        // Problem : 현재 손 제거 안 되는 중(Creature에서 사용할 때는 됐는데 왤까?)
-        // Player 손 제거
-        //Transform child = transform.GetChild(0);
-        //child.gameObject.SetActive(false);
 
         base.UpdateJump();
 
         _makeJump = false;
 
-        // Player 손 복구
-        //child.gameObject.SetActive(true);
     }
 
     protected override void UpdateAttack() {
-        // (Fixed)Problem 01 : Not Instaniate
-        // (FIxed)Problem 02 : Too Many Shoot Once(need too decrease)
-        // TODO 현재 _target을 아무 곳에서도 안씀
-        //_target = Manager.Mouse.CheckMousePos();
         //Debug.Log($"{_target.position}");
         base.UpdateAttack();
 
@@ -293,12 +278,6 @@ public class PlayerController : CreatureController {
 
 
     #region 총기 습득/드롭 관련
-    //protected override void GunInit() {
-    //    base.GunInit();
-
-    //    RemainAmmoAction(gunInfo.ammo);
-    //}
-
 
     // 총기 위치 손으로 초기화 
     void TakeGun() {

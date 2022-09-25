@@ -79,18 +79,15 @@ public class PoolManager {
             return PopPoolChild(originObj, poolObj.gameObject, Vector3.zero, Quaternion.identity);
         }
     }
-    // public GameObject UsePool(GameObject originObj) {
     public GameObject UsePool(GameObject originObj, Vector3 pos, Quaternion rot, Vector3 shootDir) {
         Transform poolObj = _root.transform.Find(originObj.name);
         if (poolObj == null) {
             // Pool들의 root 하위로 originObj에 대한 pool 생성
             poolObj = InitPoolObj(originObj, _root.transform).transform;
 
-            // return PopPoolChild(originObj, poolObj);
             return PopPoolChild(originObj, poolObj.gameObject, pos, rot, shootDir);
         }
         else {
-            // return PopPoolChild(originObj, poolObj);
             return PopPoolChild(originObj, poolObj.gameObject, pos, rot, shootDir);
         }
     }
@@ -154,7 +151,6 @@ public class PoolManager {
                 Pool pool = new Pool();
                 pool.Init(originObj, parentObj);
                 _poolDic.Add(originObj.name, pool);
-                //return pool.Pop();
                 return pool.Pop(pos, rot, shootDir);
             }
 
@@ -165,14 +161,12 @@ public class PoolManager {
 
             // 비활성화 된 Obj가 남아있는 경우
             if (!pool.Count().Equals(0)) {
-                //return pool.Pop();
                 return pool.Pop(pos, rot, shootDir);
             }
             // 비활성화 된 Obj가 남아있지 않은 경우
             else {
                 // Obj를 Pool에 추가 생성(Init을 이용) 및 Pop
                 pool.Init(originObj, parentObj, 1);
-                //return pool.Pop();
                 return pool.Pop(pos, rot, shootDir);
             }
         }

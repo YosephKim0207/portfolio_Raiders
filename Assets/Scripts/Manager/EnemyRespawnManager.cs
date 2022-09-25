@@ -53,14 +53,6 @@ public class EnemyRespawnManager {
     }
 
     void MakeEnemy(GameObject enemy, int density = 1) {
-        // TODO respawn 좌표 만들기
-        //while (respawnPosStack.Count != 0) {
-        //    pos = respawnPosStack.Pop();
-        //    _remainEnemy += 1;
-        //    Vector3Int cellPos = Manager.Map.ArrToCellPos(pos);
-        //    Object.Instantiate(enemy, cellPos, Quaternion.identity);
-        //}
-        //respawnPosStack.Clear();
         if (density < 1 || density > respawnPosStack.Count) {
             density = respawnPosStack.Count / 4;
         }
@@ -68,7 +60,6 @@ public class EnemyRespawnManager {
         for (int i = 0; i < density; ++i) {
             pos = respawnArray[i];
             Vector3Int cellPos = Manager.Map.ArrToCellPos(pos);
-            //Object.Instantiate(enemy, cellPos, Quaternion.identity);
             go = Manager.Pool.UsePool(enemy);
             go.transform.position = cellPos;
             go = null;
@@ -82,7 +73,6 @@ public class EnemyRespawnManager {
 
     float CheckMaxCamRange() {
         // cam이 현재 반대에서 촬영 중인 것 감안하여 min/max 바뀌어서 변수에 저장
-        // Player의 위치가 달려져도 worldLefDownPos에 저장되는 월드좌표가 x = 10임 뭔가 이상 확인 필요 
         Vector3 worldLeftDownPos = _cam.ViewportToWorldPoint(viewLeftDownPos);
         Vector3 worldRightUpPos = _cam.ViewportToWorldPoint(vidwRightUpPos);
         _maxX = worldLeftDownPos.x;
@@ -143,8 +133,6 @@ public class EnemyRespawnManager {
         }
     }
 
-    // TODO 현 시점 카메라 범위로 NPC 생성시 극심한 렉 발생, 최적화 필요
-    // A* Paht쪽 문제인 것 같음
     void SetMaxRespawnRange(Vector3 playerTransPos, float maxCamRange) {
         playerTransPos.x = maxCamRange - playerTransPos.x;
         respawnRangePos = Manager.Map.CellToArrPos(Manager.Map.Grid.WorldToCell(playerTransPos));

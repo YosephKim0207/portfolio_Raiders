@@ -10,8 +10,6 @@ public class SoundManager {
         GameObject root = GameObject.Find("@Sound");
         if(root == null) {
             root = new GameObject { name = "@Sound" };
-            // DontDestroy 사용시 씬 전환되면서 응답없음 버그
-            //Object.DontDestroyOnLoad(root);
 
             string[] names = System.Enum.GetNames(typeof(EnumList.SoundType));
             for(int i = 0; i < names.Length - 1; ++i) {

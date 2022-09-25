@@ -12,11 +12,7 @@ public class MouseManager {
     Vector2 _reloadHotspot;
 
     public void Init() {
-        //_mouse = Resources.Load<GameObject>("Prefabs/Mouse");
-        //if (_mouse != null) {
-        //    _mouse = Object.Instantiate(_mouse, Vector3.zero, Quaternion.Euler(Vector3.zero));
-        //}
-        _cam = Camera.main;
+         _cam = Camera.main;
         mousePos = Vector3.zero;
 
         _defaultCursor = Resources.Load<Texture2D>("Sprites/Mouse_default");
@@ -48,14 +44,4 @@ public class MouseManager {
     public void DefaultMouseShape() {
         Cursor.SetCursor(_defaultCursor, _defaultHotspot, CursorMode.Auto);
     }
-
-    //public Transform CheckMousePos() {
-    //    mousePos.x = Input.mousePosition.x;
-    //    mousePos.y = Input.mousePosition.y;
-    //    mousePos.z = 10.0f;
-    //    _mouse.transform.position = _cam.ScreenToWorldPoint(mousePos);
-
-    //    return _mouse.transform;
-    //}
-
 }
